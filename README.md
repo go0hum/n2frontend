@@ -26,3 +26,7 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### rename url in src/api
+
+const API_URL = 'https://api.zooxial.com';

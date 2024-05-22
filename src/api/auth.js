@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8006';
+const API_URL = 'https://api.zooxial.com';
 
 export const login = async (username, password) => {
   try {
