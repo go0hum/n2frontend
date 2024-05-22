@@ -87,7 +87,7 @@ const RecordTable = () => {
           if (row.id === id) {
             text = row.type;
             sum = (row.amount * -1) + row.user_balance;
-          } else if (row.type == text) {
+          } else if (row.type === text) {
             array[index].user_balance = row.amount + sum;
             sum = sum + row.amount;
           }
