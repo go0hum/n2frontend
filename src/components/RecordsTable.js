@@ -52,7 +52,7 @@ const RecordTable = () => {
     };
 
     fetchRecords();
-  }, [token, filters, page, rowsPerPage, order, orderBy]);
+  }, [token, filters, page, rowsPerPage, order, orderBy, handleLogout, navigate]);
 
   const handleFilterChange = (event, column) => {
     const value = event.target.value;
