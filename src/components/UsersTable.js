@@ -5,7 +5,7 @@ import {
   Table, TableContainer, TableHead, TableBody, TableRow, TableCell,
   Paper, Button, TablePagination, IconButton, TableSortLabel, Box
 } from '@mui/material';
-import DeleteIcon from '@mui/icons-material/Delete';
+import PersonOffIcon from '@mui/icons-material/PersonOff';
 import EditIcon from '@mui/icons-material/Edit';
 import FilterUser from './Filters/FilterUser';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -149,9 +149,11 @@ const UsersTable = () => {
                     <IconButton onClick={() => handleEdit(user.id)}>
                     <EditIcon />
                   </IconButton>
-                  <IconButton onClick={() => handleDelete(user.id)}>
-                    <DeleteIcon />
-                  </IconButton>
+                  {user.status === 1 &&
+                      <IconButton onClick={() => handleDelete(user.id)}>
+                        <PersonOffIcon />
+                      </IconButton>
+                    }
                 </TableCell>
               </TableRow>
             ))}

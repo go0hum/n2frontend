@@ -1,10 +1,9 @@
 import axios from 'axios';
-
-const API_URL = 'https://api.zooxial.com';
+import { BASE_URL } from '../config';
 
 export const getUsers = async (token, filters, page, rowsPerPage, order, orderBy) => {
   try {
-    const response = await axios.get(`${API_URL}/users.php`, {
+    const response = await axios.get(`${BASE_URL}/users.php`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -25,7 +24,7 @@ export const getUsers = async (token, filters, page, rowsPerPage, order, orderBy
 
 export const deleteUser = async (token, id) => {
     try {
-      await axios.delete(`${API_URL}/users.php?id=${id}`, {
+      await axios.delete(`${BASE_URL}/users.php?id=${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -39,7 +38,7 @@ export const deleteUser = async (token, id) => {
 
 export const createUser = async (token, recordData) => {
     try {
-      const response = await axios.post(`${API_URL}/users.php`, recordData, {
+      const response = await axios.post(`${BASE_URL}/users.php`, recordData, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -53,7 +52,7 @@ export const createUser = async (token, recordData) => {
 
   export const getUserById = async (token, id) => {
     try {
-        const response = await axios.get(`${API_URL}/users.php?id=${id}`, {
+        const response = await axios.get(`${BASE_URL}/users.php?id=${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           }
@@ -67,7 +66,7 @@ export const createUser = async (token, recordData) => {
 
   export const updateUser = async (token, id, userData) => {
     try {
-        const response = await axios.put(`${API_URL}/users.php?id=${id}`, userData, {
+        const response = await axios.put(`${BASE_URL}/users.php?id=${id}`, userData, {
           headers: {
             Authorization: `Bearer ${token}`
           }

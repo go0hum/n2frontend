@@ -1,10 +1,9 @@
 import axios from 'axios';
-
-const API_URL = 'https://api.zooxial.com';
+import { BASE_URL } from '../config';
 
 export const login = async (username, password) => {
   try {
-    const response = await axios.post(`${API_URL}/index?action=login`, { username, password });
+    const response = await axios.post(`${BASE_URL}/index?action=login`, { username, password });
     return response.data;
   } catch (error) {
     throw new Error('Invalid credentials');

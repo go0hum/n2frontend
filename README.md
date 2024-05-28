@@ -1,5 +1,10 @@
 # n2frontend
 
+## REQUIREMENTS
+
+- [Nodejs v18.16.0 or greater](https://nodejs.org/en/download/package-manager)
+- [npm v9.5.1 or greater](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -27,6 +32,14 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### rename url in src/api
+### rename url in src/config.js of your endpoint domain
 
-const API_URL = 'https://api.zooxial.com';
+const BASE_URL = 'https://api.zooxial.com';
+
+### You can see the site in the url
+
+```
+http://localhost:3000/
+```
+
+Visit the site and you can see the site in your localhost

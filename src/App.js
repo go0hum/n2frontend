@@ -6,6 +6,7 @@ import Users from './pages/Users';
 import Operations from './pages/Operations';
 import FormRecord from './pages/FormRecord';
 import FormUser from './pages/FormUser';
+import Calculator from './pages/Calculator';
 import ProtectedRoute from './components/ProtectedRoute';
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/records" element={<Records />} />
+        <Route path="/calculator" element={<Calculator />} />
         <Route path="/users" element={<ProtectedRoute><Users /></ProtectedRoute>} />
         <Route path="/operations" element={<ProtectedRoute><Operations /></ProtectedRoute>} />
         <Route path="/createrecord" element={<FormRecord />} />
